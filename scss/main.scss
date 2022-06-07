@@ -7,6 +7,7 @@ $Primary1: #FF7B4E;
 $Primary2: #FF584E;
 $Secodnary1: #428E5F;
 $Secodnary2: #112120;
+$Gold: #FFD336;
 $Gray: #c4c4c4;
 $LiteGray: #f6f6f6;
 $White: #fff;
@@ -45,6 +46,12 @@ h1 {
 	font-size: 56px;
 	font-weight: 600;
 	line-height: 1.5;
+	color: $Black;
+}
+
+h2 {
+	font-size: 45px;
+	font-weight: 500;
 	color: $Black;
 }
 
@@ -373,6 +380,108 @@ h1 {
 		background: 
 			url(..//img/arrow.svg) left 24px center / 16px no-repeat,
 			$PrimaryGradient2;
+		}
+	}
+}
+
+// * == Feedback ==
+
+.feedback {
+
+	&__container {
+		display: flex;
+	}
+
+	&__img {
+		height: 540px;
+
+		margin-right: 68px;
+
+		flex: 0 0 480px;
+
+		border-radius: 60px;
+		background: url(../img/feedback-bg.jpg) center top / cover no-repeat;
+	}
+
+	&__info {}
+
+	&__title {
+		max-width: 560px;
+
+		margin-bottom: 34px;
+	}
+
+	&__author {}
+
+	&__text {
+		max-width: 490px;
+
+		margin-bottom: 30px;
+
+		font-size: 22px;
+		font-weight: 500;
+		color: rgba($Black, 0.5);
+	}
+
+	&__rating {}
+}
+
+.author {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	margin-bottom: 60px;
+
+	&__img {
+		width: 134px;
+		height: 134px;
+
+		margin-right: 32px;
+
+		border-radius: 50%;
+		background: url(../img/author.png) center / cover no-repeat,
+		$Primary1;
+	}
+
+	&__info {
+
+	}
+
+	&__name {
+		font-size: 32px;
+		font-weight: 500;
+		color: $Black;
+
+		margin-bottom: 10px;
+	}
+
+	&__region {
+		font-size: 24px;
+		font-weight: 400;
+		color: rgba($Black, 0.5);
+	}
+}
+
+.rating {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+
+	&__item {
+		display: block;
+		width: 46px;
+		height: 46px;
+
+		background-color: $Gray;
+		mask: url(../img/star.svg) center / contain no-repeat;
+
+		&:not(:last-of-type) {
+			margin-right: 18px;
+		}
+
+		&.active {
+			background-color: $Gold;
 		}
 	}
 }

@@ -120,6 +120,12 @@ h1 {
   color: #0F1F1C;
 }
 
+h2 {
+  font-size: 45px;
+  font-weight: 500;
+  color: #0F1F1C;
+}
+
 .btn {
   padding: 26px 48px;
   font-size: 26px;
@@ -387,4 +393,98 @@ h1 {
 
 .slider__btn:hover {
   background: url(..//img/arrow.svg) left 24px center/16px no-repeat, linear-gradient(130deg, #FF584E, #FF7B4E);
+}
+
+.feedback__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.feedback__img {
+  height: 540px;
+  margin-right: 68px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 480px;
+          flex: 0 0 480px;
+  border-radius: 60px;
+  background: url(../img/feedback-bg.jpg) center top/cover no-repeat;
+}
+
+.feedback__title {
+  max-width: 560px;
+  margin-bottom: 34px;
+}
+
+.feedback__text {
+  max-width: 490px;
+  margin-bottom: 30px;
+  font-size: 22px;
+  font-weight: 500;
+  color: rgba(15, 31, 28, 0.5);
+}
+
+.author {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
+
+.author__img {
+  width: 134px;
+  height: 134px;
+  margin-right: 32px;
+  border-radius: 50%;
+  background: url(../img/author.png) center/cover no-repeat, #FF7B4E;
+}
+
+.author__name {
+  font-size: 32px;
+  font-weight: 500;
+  color: #0F1F1C;
+  margin-bottom: 10px;
+}
+
+.author__region {
+  font-size: 24px;
+  font-weight: 400;
+  color: rgba(15, 31, 28, 0.5);
+}
+
+.rating {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.rating__item {
+  display: block;
+  width: 46px;
+  height: 46px;
+  background-color: #c4c4c4;
+  -webkit-mask: url(../img/star.svg) center/contain no-repeat;
+          mask: url(../img/star.svg) center/contain no-repeat;
+}
+
+.rating__item:not(:last-of-type) {
+  margin-right: 18px;
+}
+
+.rating__item.active {
+  background-color: #FFD336;
 }

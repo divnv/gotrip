@@ -5,6 +5,7 @@
 
 $Primary1: #FF7B4E;
 $Primary2: #FF584E;
+$PrimaryLight: #FFBDA7;
 $Secodnary1: #428E5F;
 $Secodnary2: #112120;
 $Gold: #FFD336;
@@ -86,6 +87,7 @@ h2 {
 }
 
 .container {
+	width: 100%;
 	max-width: 1280px;
 	padding: 0 20px;
 	margin: 0 auto;
@@ -94,6 +96,8 @@ h2 {
 // *  == Main ==
 
 .main {
+	margin-bottom: 106px;
+
 	flex-grow: 1;
 }
 
@@ -107,10 +111,24 @@ h2 {
 	z-index: 100;
 	
 	&__container {
-		display: flex;
-		justify-content: space-between;
-		align-items: center;
+
 	}
+
+	&__common-links {}
+
+	&__logo {}
+
+	&__nav {}
+
+	&__sing {}
+}
+
+// * == Common Links ==
+
+.common-links {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
 
 	&__logo {}
 
@@ -125,6 +143,10 @@ h2 {
 	font-style: 20px;
 	font-weight: 700;
 	color: $White;
+
+	&--orange {
+		color: $Primary1;
+	}
 }
 
 // ** == Nav ==
@@ -172,6 +194,11 @@ h2 {
 					opacity: 1;
 				}
 			}
+
+			&--gray {
+				color: rgba($Black, 0.5);
+			}
+
 		}
 	} 
 
@@ -193,6 +220,10 @@ h2 {
 			border-radius: 100px;
 			background: $PrimaryGradient;
 			padding: 12px 44px;
+		}
+
+		&--gray {
+			color: rgba($Black, 0.5);
 		}
 	}
 }
@@ -387,6 +418,7 @@ h2 {
 // * == Feedback ==
 
 .feedback {
+	margin-bottom: 230px;
 
 	&__container {
 		display: flex;
@@ -426,6 +458,8 @@ h2 {
 	&__rating {}
 }
 
+// * == Author ==
+
 .author {
 	display: flex;
 	flex-direction: row;
@@ -463,6 +497,8 @@ h2 {
 	}
 }
 
+// * == Rating ==
+
 .rating {
 	display: flex;
 	flex-direction: row;
@@ -477,7 +513,7 @@ h2 {
 		mask: url(../img/star.svg) center / contain no-repeat;
 
 		&:not(:last-of-type) {
-			margin-right: 18px;
+			margin-right: 22px;
 		}
 
 		&.active {
@@ -486,4 +522,118 @@ h2 {
 	}
 }
 
+// * == Discount ==
 
+.discount {
+	margin-bottom: 134px;
+
+	&__container {}
+
+	&__inner {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+
+		position: relative;
+		text-align: center;
+
+		padding: 116px 0;
+
+		border-radius: 60px;
+		background: $White;
+
+		&::before,
+		&::after {
+			content: '';
+			display: block;
+			width: 64px;
+			height: 84px;
+
+			position: absolute;
+
+			background: $PrimaryLight;
+			mask: url(../img/part-2.svg) center / contain no-repeat;
+		}
+
+		&::before {
+			left: 74px;
+			bottom: 56px;
+			transform: rotate(180deg);
+		}
+
+		&::after {
+			top: 74px;
+			right: 80px;
+		}
+
+	}
+
+	&__title {
+		max-width: 520px;
+		margin-bottom: 30px;
+	}
+
+	&__text {
+		font-size: 30px;
+		font-weight: 400;
+
+		max-width: 720px;
+		margin-bottom: 60px;
+	}
+
+	&__btn {}
+}
+
+// * == Subscribe ==
+
+.subscribe {
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__title {
+		max-width: 510px;
+		text-align: center;
+		margin-bottom: 60px;
+	}
+
+	&__mailbox {}
+}
+
+// * == Mail Box ==
+
+.mailbox {
+	display: flex;
+
+	max-width: 800px;
+	width: 100%;
+
+	padding: 12px 14px;
+
+	background-color: $White;
+	border-radius: 36px;
+
+	&__input {
+		flex: 1 1 0px;
+		padding-left: 32px;
+		margin-right: 32px;
+	}
+
+	&__btn {
+		padding: 34px 86px;
+	}
+}
+
+// * == Footer ==
+
+.footer {
+	padding-bottom: 74px;
+
+	&__container {}
+
+	&__common-links {}
+
+}
